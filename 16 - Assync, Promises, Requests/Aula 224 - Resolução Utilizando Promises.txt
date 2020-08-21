@@ -1,0 +1,66 @@
+CÓDIGO DE RESOLUÇÃO DO EXERCÍCIO
+
+
+- src/spaceship.js
+
+class Spaceship {
+  constructor(name, maxCapacity, currentCharge) {
+    this.name = name
+    this.maxCapacity = maxCapacity
+    this.currentChage = currentCharge
+  }
+
+  currentPercentCharge() {
+    return this.currentChage * 100 / this.maxCapacity
+  }
+}
+
+export default Spaceship
+
+
+- src/spaceship_engine.js
+
+export default class {
+  constructor(spaceship) {
+    this.spaceship = spaceship
+  }
+
+  turnOn() {
+    this.checkCurrentCharge().then(currentCharge => {
+      console.log(`(${this.spaceship.name}) Partida autorizada: carga atual em ${currentCharge}%.`)
+    }).catch(currentCharge => {
+      console.log(`(${this.spaceship.name}) Partida não autorizada: carga em apenas ${currentCharge}%.`)
+    })
+  }
+
+  checkCurrentCharge() {
+    return new Promise((resolve, reject) => {
+      let currentCharge = this.spaceship.currentPercentCharge()
+      if(currentCharge >= 30) {
+        resolve(currentCharge)
+      } else {
+        reject(currentCharge)
+      }
+    })
+  }
+}
+
+
+- src/index.js
+
+import Spaceship from './spaceship'
+import SpaceshipEngine from "./spaceship_engine"
+
+const sophia = new Spaceship("Sophia", 10, 5)
+const amsterda = new Spaceship("Amsterdã", 14, 10)
+const dwarfStart = new Spaceship("Estrela-Anã", 20, 4)
+
+const sophiaEngine = new SpaceshipEngine(sophia)
+const amsterdaEngine = new SpaceshipEngine(amsterda)
+const dwarfStartEngine = new SpaceshipEngine(dwarfStart)
+
+sophiaEngine.turnOn()
+amsterdaEngine.turnOn()
+dwarfStartEngine.turnOn()
+
+console.log("Promises")

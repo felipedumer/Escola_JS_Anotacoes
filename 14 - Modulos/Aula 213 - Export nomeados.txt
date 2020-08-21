@@ -1,0 +1,35 @@
+CÓDIGO INICIAL (AULA ANTERIOR)
+
+- src/spaceship.js
+
+class Spaceship {
+  constructor(name, captain, armaments = [], defenses = []) {
+    this.name = name
+    this.captain = captain
+    this.armaments = armaments
+    this.defenses = defenses
+  }
+}
+
+export default Spaceship
+
+
+- src/armaments.js
+
+export default {
+  laser: ["Phasers", "Torpedos de Fóton"],
+  explosion: ["Canhão", "Torpedos de TNT"]
+}
+
+
+- src/index.js
+
+import Spaceship from "./spaceship"
+import armamentKind from "./armaments"
+
+const spaceship = new Spaceship("USS Enterprise", "James Tiberius Kirk", armamentKind.laser)
+
+console.log(spaceship)
+
+
+Avalie esta aula:

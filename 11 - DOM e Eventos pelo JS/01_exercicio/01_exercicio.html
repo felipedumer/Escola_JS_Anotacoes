@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="01_home-registration.js"></script>
+</head>
+<body>
+    <h3>Registro de casa</h3>
+
+    <form>
+        <p>
+            <label> Area: </label>
+            <input type="text" name="area"/>
+        </p>
+        
+        <p>
+            <label>Número: </label>
+            <input type="text" name="numero"/>
+        </p>
+        
+        <p>
+            <label>Bairro: </label>
+            <input type="text" name="bairro"/>
+        </p>
+        
+        <p>
+            <label>Cidade: </label>
+            <input type="text" name="cidade"/>
+        </p>
+
+        <button onclick="salvarCasa()" type="button">Salvar</button> 
+   
+        <ul id="lista-casas"></ul>
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+CÓDIGO INICIAL (AULA ANTERIOR)
+
+
+- spaceship.js
+
+class Spaceship {
+  constructor(name, captain, armaments = [], defenses = []) {
+    this.name = name
+    this.captain = captain
+    this.armaments = armaments
+    this.defenses = defenses
+  }
+}
+
+export default Spaceship
+
+
+- armaments.js
+
+export default {
+  laser: ["Phasers", "Torpedos de Fóton"],
+  explosion: ["Canhão", "Torpedos de TNT"]
+}

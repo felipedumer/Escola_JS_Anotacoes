@@ -1,0 +1,21 @@
+URL DA API: https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY
+
+
+CÓDIGO INICIAL
+
+- src/neo.js
+
+export default class { 
+  constructor(id, name, averageEstimatedDiameter, isSentry) {
+    this.id = id
+    this.name = name
+    this.averageEstimatedDiameter = averageEstimatedDiameter
+    this.isSentry = isSentry
+  }
+}
+
+
+- src/index.js
+
+import "core-js"
+import "regenerator-runtime/runtime"

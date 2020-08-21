@@ -1,0 +1,22 @@
+CÓDIGO INICIAL (AULA ANTERIOR)
+
+- planet.js
+
+class Planet {
+  constructor(name, surfaceArea) {
+    this.name = name
+    this.surfaceArea = surfaceArea
+  }
+  rotate() {
+    console.log("Rotacionando!")
+  }
+}
+module.exports = Planet
+
+
+- solar_system.js
+
+module.exports = {
+  planets: [],
+  central_star: "Sol"
+}

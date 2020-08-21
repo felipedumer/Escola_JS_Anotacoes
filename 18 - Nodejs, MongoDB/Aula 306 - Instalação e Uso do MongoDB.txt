@@ -1,0 +1,13 @@
+Instalação no Linux (Ubuntu): https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu
+
+Instalação no Mac: https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-os-x
+
+Instalação no Windows:
+- Passo a passo oficial: https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-windows
+- Passo a passo alternativo:https://pplware.sapo.pt/tutoriais/mongodb-instalar-e-configurar-a-bd-nosql-no-windows-10
+
+
+
+Leituras recomendadas:
+
+    Introdução oficial ao MongoDB: https://docs.mongodb.com/manual/introduction

@@ -1,0 +1,20 @@
+li{
+    color:green;
+}
+h1{
+    color: blue;
+    font-size:35px;
+    background-color: red;
+    border-color: yellow;
+    border-width: 2px;
+    border-style: dashed;
+
+    border: 22px dashed yellow
+}
+
+body{
+    background-color: grey;
+    background-image: url(https://midia.gruposinos.com.br/_midias/jpg/2015/09/20/nasa_blue_marble-1066991.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

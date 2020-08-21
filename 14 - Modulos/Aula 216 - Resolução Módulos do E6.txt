@@ -1,0 +1,56 @@
+CÓDIGO DE RESOLUÇÃO DO EXERCÍCIO
+
+
+- src/planet.js
+
+export default class Planet {
+  constructor(name, auToSun) {
+    this.name = name
+    this.auToSum = auToSun
+  }
+}
+
+
+- src/planet_operations.js
+
+export const AU_IN_KILOMETERS = 149587870
+export function convertAUtoKm(au) {
+    return au * AU_IN_KILOMETERS
+}
+
+
+- src/index.js
+
+import Planet from "./planet" 
+import { convertAUtoKm } from './planet_operations'
+let planets = [
+  new Planet("Mercúrio", 0.39),
+  new Planet("Vênus", 0.72),
+  new Planet("Terra", 1),
+  new Planet("Marte", 1.52),
+  new Planet("Júpier", 5.2),
+  new Planet("Saturno", 9.53),
+  new Planet("Urano", 19.1),
+  new Planet("Netuno", 30)
+]
+planets.forEach(planet => {
+  let distanceFromSun = convertAUtoKm(planet.auToSum).toFixed(2)
+  console.log(`${planet.name} - ${planet.auToSum}AU - ${distanceFromSun}km`)
+})
+
+
+- dist/index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercício - Módulo ES6</title>
+  <script src="index.bundle.js"></script>
+</head>
+<body>
+  
+</body>
+</html>

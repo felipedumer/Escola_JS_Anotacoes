@@ -1,0 +1,23 @@
+* {
+border: 2px solid;
+}
+
+li a{
+    color: aqua;
+}
+
+li > a{
+    color: red;
+}
+
+h1 + h4{
+    border: 4px dashed;
+}
+
+a[href='teste'] {
+    color: purple
+}
+
+li:nth-of-type(odd) {
+    color: yellow
+}
